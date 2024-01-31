@@ -29,10 +29,10 @@ if __name__ == "__main__":
     gui = Tk()
 
     # set the background colour of GUI window
-    gui.configure(background="light green")
+    gui.configure(background="dark grey")
 
     # set the title of GUI window
-    gui.title("Simple Calculator")
+    gui.title("Calculator")
 
     # StringVar() is the variable class
     # we create an instance of this class
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     buttons = []
 
     for i in range(1, 10):
-        button = Button(gui, text=f' {i} ', fg='black', bg='red', command=lambda num=i: press(str(num)), height=1, width=7)
+        button = Button(gui, text=f' {i} ', fg='black', bg='white', command=lambda num=i: press(str(num)), height=1, width=7)
         button.grid(row=(i - 1) // 3 + 2, column=(i - 1) % 3, sticky="nsew")
         buttons.append(button)
 
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     ]
 
     for text, row, column in additional_buttons:
-        button = Button(gui, text=text, fg='black', bg='red', command=lambda t=text: press(t), height=1, width=7)
+        button = Button(gui, text=text, fg='black', bg='white', command=lambda t=text: press(t), height=1, width=7)
         button.grid(row=row, column=column, sticky="nsew")
         buttons.append(button)
 
